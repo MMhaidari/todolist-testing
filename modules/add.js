@@ -14,9 +14,10 @@ const newTask = (item) => {
   taskList.push(task);
 
   Storage(taskList);
-  item.value = '';
+  // item.value = '';
   populateList(taskList);
   return task;
 };
 
 export default newTask;
+module.exports = newTask;
