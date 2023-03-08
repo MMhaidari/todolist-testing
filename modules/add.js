@@ -14,8 +14,8 @@ const newTask = (item) => {
   taskList.push(task);
 
   Storage(taskList);
-  // item.value = '';
   populateList(taskList);
+
   return task;
 };
 

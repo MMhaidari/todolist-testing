@@ -3,12 +3,6 @@ import { Storage, getStorage, editTask } from './localStorage';
 import trashTask from './remove';
 
 export const populateList = () => {
-  const listContainer = document.querySelector('.to-do-list');
-
-  // while (listContainer.lastChild) {
-  //   listContainer.removeChild(listContainer.lastChild);
-  // }
-
   const tasks = getStorage();
 
   if (tasks != null) {
@@ -50,7 +44,6 @@ export const populateList = () => {
 
       list1Child.append(newDiv, trash);
       lists.append(list1Child);
-      listContainer.appendChild(lists);
 
       label.addEventListener('focus', () => {
         trash.style.display = 'none';

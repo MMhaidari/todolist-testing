@@ -15,3 +15,4 @@ const trashTask = (taskIndex) => {
 };
 
 export default trashTask;
+module.exports = trashTask;
