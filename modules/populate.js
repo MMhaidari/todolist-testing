@@ -5,9 +5,9 @@ import trashTask from './remove';
 export const populateList = () => {
   const listContainer = document.querySelector('.to-do-list');
 
-  while (listContainer.lastChild) {
-    listContainer.removeChild(listContainer.lastChild);
-  }
+  // while (listContainer.lastChild) {
+  //   listContainer.removeChild(listContainer.lastChild);
+  // }
 
   const tasks = getStorage();
 
