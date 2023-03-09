@@ -10,3 +10,4 @@ const trashCompleted = () => {
 };
 
 export default trashCompleted;
+module.exports = trashCompleted;

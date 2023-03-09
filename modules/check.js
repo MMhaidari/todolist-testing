@@ -9,3 +9,5 @@ const check = (checkbox, item) => {
 };
 
 export default check;
+
+module.exports = check;
