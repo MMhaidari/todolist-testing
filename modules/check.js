@@ -1,4 +1,4 @@
-export const check = (checkbox, item) => {
+const check = (checkbox, item) => {
   if (checkbox.checked) {
     checkbox.nextElementSibling.style.textDecoration = 'line-through';
     item.completed = true;
