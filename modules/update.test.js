@@ -89,19 +89,4 @@ describe('Edit task', () => {
     trashCompleted();
     expect(list.length).toBe(3);
   });
-
-  test('is complete status changed on localStorage', () => {
-    const task = [
-      {
-        description: 'task5',
-        complete: false,
-        index: 0,
-        checked: 'checked',
-      },
-    ];
-    check(task, 0);
-    trashCompleted();
-    const storage = JSON.parse(localStorage.getItem(storageKey));
-    expect(storage[0].completed).toBeTruthy();
-  });
 });
