@@ -1,6 +1,6 @@
 import { Storage, getStorage } from './localStorage';
 
-const trashCompleted = () => {
+export const trashCompleted = () => {
   const storedTasks = getStorage();
 
   const uncompletedTask = storedTasks.filter(
