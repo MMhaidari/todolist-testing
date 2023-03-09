@@ -64,4 +64,44 @@ describe('Edit task', () => {
 
     expect(completeStatus).toBe(true);
   });
+  test('clear all completed', () => {
+    const list = [
+      {
+        description: 'task1',
+        complete: false,
+        index: 1,
+        checked: '',
+      },
+      {
+        description: 'task3',
+        complete: true,
+        index: 2,
+        checked: 'checked',
+      },
+      {
+        description: 'task5',
+        complete: false,
+        index: 3,
+        checked: '',
+      },
+    ];
+
+    trashCompleted();
+    expect(list.length).toBe(3);
+  });
+
+  test('is complete status changed on localStorage', () => {
+    const task = [
+      {
+        description: 'task5',
+        complete: false,
+        index: 0,
+        checked: 'checked',
+      },
+    ];
+    check(task, 0);
+    trashCompleted();
+    const storage = JSON.parse(localStorage.getItem(storageKey));
+    expect(storage[0].completed).toBeTruthy();
+  });
 });
