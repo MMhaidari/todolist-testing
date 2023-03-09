@@ -5,7 +5,6 @@
 import { editTask } from './localStorage';
 
 const trashCompleted = require('./iterate');
-const check = require('./check');
 
 const localStorageMock = (() => {
   let store = {};
@@ -29,8 +28,6 @@ const localStorageMock = (() => {
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 
 describe('Edit task', () => {
-  const storageKey = 'myTasks';
-
   beforeEach(() => {
     localStorage.clear();
   });
