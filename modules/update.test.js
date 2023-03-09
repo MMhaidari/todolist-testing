@@ -3,8 +3,9 @@
  */
 
 import { editTask } from './localStorage';
-import { trashCompleted } from './iterate';
-import { check } from './check';
+
+const trashCompleted = require('./iterate');
+const check = require('./check');
 
 const localStorageMock = (() => {
   let store = {};
